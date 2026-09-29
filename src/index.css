@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #07090e;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Glassmorphic Panels */
+.glass-panel {
+  background: rgba(13, 19, 33, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-glow {
+  background: rgba(13, 19, 33, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.25), inset 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.glass-panel-alert {
+  background: rgba(30, 10, 15, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.25);
+}
+
+/* Tech Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.6);
+}
+
+/* HUD Grid Background */
+.bg-tech-grid {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+}
+
+/* Vision Bounding Box Overlay */
+.vision-bbox {
+  border: 2px dashed #f43f5e;
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.6), inset 0 0 10px rgba(244, 63, 94, 0.2);
+}
+
+.vision-bbox-warning {
+  border: 2px dashed #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6), inset 0 0 10px rgba(245, 158, 11, 0.2);
+}
