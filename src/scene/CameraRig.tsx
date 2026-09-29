@@ -60,19 +60,49 @@ export function CameraRig() {
       }
     }
 
-    const { position, tangent, normal } = getTrackFrameAt(trackSpline, vehicleProgress);
+    const { position, tangent, normal, binormal } = getTrackFrameAt(trackSpline, vehicleProgress);
     const vehiclePos = position.clone().addScaledVector(normal, 0.4);
 
     if (cameraMode === 'chase') {
-      const offsetBack = tangent.clone().multiplyScalar(-6.5);
-      const offsetUp = normal.clone().multiplyScalar(3.2);
+      const offsetBack = tangent.clone().multiplyScalar(-7.5);
+      const offsetUp = normal.clone().multiplyScalar(3.6);
       targetCamPos = vehiclePos.clone().add(offsetBack).add(offsetUp);
       targetLookAt = vehiclePos.clone().add(tangent.clone().multiplyScalar(4.0));
       dampLambda = 6.0;
+    } else if (cameraMode === 'front_low') {
+      // Photo 1: Front 3/4 Low Angle Perspective near wheels looking up at smokebox and side rods
+      const offsetFront = tangent.clone().multiplyScalar(5.5);
+      const offsetSide = binormal.clone().multiplyScalar(3.8);
+      const offsetUp = normal.clone().multiplyScalar(1.2);
+      targetCamPos = vehiclePos.clone().add(offsetFront).add(offsetSide).add(offsetUp);
+      targetLookAt = vehiclePos.clone().add(tangent.clone().multiplyScalar(1.2)).add(normal.clone().multiplyScalar(1.1));
+      dampLambda = 6.0;
+    } else if (cameraMode === 'side_profile') {
+      // Photo 2: Full Broadside Elevation of Engine + Tender + Coach
+      const offsetSide = binormal.clone().multiplyScalar(14.5);
+      const offsetUp = normal.clone().multiplyScalar(2.2);
+      targetCamPos = vehiclePos.clone().add(offsetSide).add(offsetUp);
+      targetLookAt = vehiclePos.clone().add(tangent.clone().multiplyScalar(-1.2)).add(normal.clone().multiplyScalar(1.1));
+      dampLambda = 5.0;
+    } else if (cameraMode === 'rear_iso') {
+      // Photo 3: Rear High Isometric View looking down at white coach roof and curved tracks
+      const offsetBack = tangent.clone().multiplyScalar(-13.0);
+      const offsetSide = binormal.clone().multiplyScalar(7.5);
+      const offsetUp = normal.clone().multiplyScalar(8.5);
+      targetCamPos = vehiclePos.clone().add(offsetBack).add(offsetSide).add(offsetUp);
+      targetLookAt = vehiclePos.clone().add(tangent.clone().multiplyScalar(-3.5)).add(normal.clone().multiplyScalar(0.8));
+      dampLambda = 5.0;
+    } else if (cameraMode === 'head_on') {
+      // Photo 4: Direct Front Head-On View facing smokebox & lantern headlights
+      const offsetFront = tangent.clone().multiplyScalar(7.8);
+      const offsetUp = normal.clone().multiplyScalar(0.6);
+      targetCamPos = vehiclePos.clone().add(offsetFront).add(offsetUp);
+      targetLookAt = vehiclePos.clone().add(tangent.clone().multiplyScalar(2.5)).add(normal.clone().multiplyScalar(1.1));
+      dampLambda = 6.0;
     } else if (cameraMode === 'sensor') {
-      targetCamPos = vehiclePos.clone().addScaledVector(tangent, 1.2).addScaledVector(normal, 0.5);
-      targetLookAt = vehiclePos.clone().addScaledVector(tangent, 15.0).addScaledVector(normal, -0.2);
-      dampLambda = 12.0;
+      targetCamPos = vehiclePos.clone().addScaledVector(tangent, 2.8).addScaledVector(normal, 0.4).addScaledVector(binormal, 1.6);
+      targetLookAt = vehiclePos.clone().addScaledVector(tangent, 4.0).addScaledVector(normal, 0.1);
+      dampLambda = 10.0;
     } else if (cameraMode === 'top') {
       targetCamPos = vehiclePos.clone().add(new THREE.Vector3(0, 95, 1));
       targetLookAt = vehiclePos;
@@ -86,7 +116,6 @@ export function CameraRig() {
       targetLookAt = vehiclePos;
       dampLambda = 3.5;
     } else if (cameraMode === 'orbit') {
-      // In free orbit mode, let OrbitControls handle smooth camera motion
       if (orbitRef.current) {
         dampVector3(orbitRef.current.target, vehiclePos, 4.0, safeDelta);
       }

@@ -3,7 +3,16 @@ import * as THREE from 'three';
 import { getTrackSpline, getTrackLength } from '../sim/trackGenerator';
 import { initialDefects, RailDefect, getDefectStateAtPass, INSPECTION_PASSES } from '../sim/defectEngine';
 
-export type CameraMode = 'orbit' | 'chase' | 'top' | 'sensor' | 'cinematic';
+export type CameraMode =
+  | 'chase'
+  | 'front_low'
+  | 'side_profile'
+  | 'rear_iso'
+  | 'head_on'
+  | 'top'
+  | 'sensor'
+  | 'cinematic'
+  | 'orbit';
 
 export interface ActiveSensors {
   optical: boolean;
@@ -39,6 +48,9 @@ interface SimStoreState {
   enablePostProcessing: boolean;
   showOnboarding: boolean;
 
+  // Active 4D Sensor Inspection Modal State
+  selectedSensor4D: 'optical' | 'acoustic' | 'accelerometer' | 'laser' | 'thermal' | null;
+
   // Sensors configuration
   activeSensors: ActiveSensors;
 
@@ -67,6 +79,7 @@ interface SimStoreState {
   togglePostProcessing: () => void;
   setShowOnboarding: (show: boolean) => void;
   setCameraMode: (mode: CameraMode) => void;
+  setSelectedSensor4D: (sensor: 'optical' | 'acoustic' | 'accelerometer' | 'laser' | 'thermal' | null) => void;
   toggleSensor: (sensorKey: keyof ActiveSensors) => void;
   selectDefect: (id: string | null) => void;
   updateDefectStatus: (id: string, status: import('../sim/defectEngine').DefectStatus) => void;
@@ -95,6 +108,8 @@ export const useSimStore = create<SimStoreState>((set, get) => ({
   cameraMode: 'chase',
   enablePostProcessing: false,
   showOnboarding: true,
+
+  selectedSensor4D: null,
 
   activeSensors: {
     optical: true,
@@ -141,6 +156,8 @@ export const useSimStore = create<SimStoreState>((set, get) => ({
   setShowOnboarding: (show) => set({ showOnboarding: show }),
 
   setCameraMode: (mode) => set({ cameraMode: mode }),
+
+  setSelectedSensor4D: (sensor) => set({ selectedSensor4D: sensor }),
 
   toggleSensor: (sensorKey) =>
     set((state) => ({
