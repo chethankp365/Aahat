@@ -377,7 +377,7 @@ Aahat/
 
 ## 👤 Author
 
-**Chethan Kumar KP** · USN `1AT23CG034`
+**Chethan Kumar KP** 
 Atria Institute of Technology, Bengaluru
 
 <p align="center">
