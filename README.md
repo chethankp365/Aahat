@@ -31,7 +31,7 @@
   <a href="#-getting-started">Get Started</a>
 </p>
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 <p align="center">
   <img src="stats.svg" alt="AAHAT at a glance" width="100%">
@@ -45,7 +45,7 @@
   <img src="pipeline.svg" alt="AAHAT sensing, fusion, localization, scoring and alert pipeline" width="100%">
 </p>
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🚨 The Problem
 
@@ -67,7 +67,7 @@ flowchart LR
 
 **AAHAT moves railway maintenance from Reactive → Preventive → Predictive.**
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🧠 The Solution
 
@@ -106,7 +106,7 @@ sequenceDiagram
 | 💬 | **Natural-language AI explanations** | Each detection in the feed can be explained in plain English |
 | 🔔 | **Instant alerts** | LCD + buzzer + dashboard: *"Priority inspection recommended"* |
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🎬 Live Dashboard Tour
 
@@ -114,24 +114,18 @@ The **AAHAT Live Track Monitoring** dashboard is an interactive 3D digital-twin 
 
 > 📸 *Screenshots below are captured from the running prototype.*
 
-### 🚂 Multi-angle 3D view — Side Elevation with a confirmed defect
+### 🎥 Multi-angle 3D views
 
-<p align="center">
-  <img src="Screenshot_2026-09-30_023235.png" alt="Side elevation view with multi-sensor confirmed defect DEF-102" width="100%">
-</p>
-
-The **multi-sensor halo** (red pulse) marks `DEF-102` as **HIGH** risk, **confirmed 3/3** by acoustic, vibration and vision, with a forecast of **"Critical in 5 days"**.
-
-### 🎥 Rear high-iso and head-on views
+The **multi-sensor halo** marks a defect once 2+ sensors agree, and the **ghost ring** shows its predicted progression.
 
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="Screenshot_2026-09-30_023244.png" alt="Rear high iso camera view with DEF-104 medium risk" width="100%"><br>
+      <img src="Screenshot%202026-09-30%20023244.png" alt="Rear high iso camera view with DEF-104 medium risk" width="100%"><br>
       <sub><b>Rear High-Iso</b> — <code>DEF-104</code> MEDIUM, confirmed 2/3, forecast critical in 23 days, with the predictive <i>ghost ring</i></sub>
     </td>
     <td width="50%" align="center">
-      <img src="Screenshot_2026-09-30_023216.png" alt="Head-on view of the trolley approaching KM markers" width="100%"><br>
+      <img src="Screenshot%202026-09-30%20023216.png" alt="Head-on view of the trolley approaching KM markers" width="100%"><br>
       <sub><b>Direct Front (Head-on)</b> — the trolley advances along the track past KM markers while live streams update</sub>
     </td>
   </tr>
@@ -141,16 +135,12 @@ The **multi-sensor halo** (red pulse) marks `DEF-102` as **HIGH** risk, **confir
 
 <table>
   <tr>
-    <td width="33%" align="center">
-      <img src="Screenshot_2026-09-30_023342.png" alt="Camera view angles panel" width="100%"><br>
-      <sub><b>9 camera presets</b> + 4D Sensor Working View (Optical CV · Acoustic 4D · IMU Accel · LiDAR 4D)</sub>
-    </td>
-    <td width="33%" align="center">
-      <img src="Screenshot_2026-09-30_023410.png" alt="Live monitoring telemetry panel" width="100%"><br>
+    <td width="50%" align="center">
+      <img src="Screenshot%202026-09-30%20023410.png" alt="Live monitoring telemetry panel" width="75%"><br>
       <sub><b>Live telemetry</b> — position, trolley speed, vibration G, acoustic dB, gauge deviation, rail temperature</sub>
     </td>
-    <td width="33%" align="center">
-      <img src="Screenshot_2026-09-30_023337.png" alt="Risk categories legend" width="100%"><br>
+    <td width="50%" align="center">
+      <img src="Screenshot%202026-09-30%20023337.png" alt="Risk categories legend" width="75%"><br>
       <sub><b>Risk categories</b> — Normal · Monitor · Warning · Critical, with halo and ghost-ring legend</sub>
     </td>
   </tr>
@@ -159,12 +149,12 @@ The **multi-sensor halo** (red pulse) marks `DEF-102` as **HIGH** risk, **confir
 ### 🗺️ GIS mini-map + AI detection feed
 
 <p align="center">
-  <img src="Screenshot_2026-09-30_023500.png" alt="2D top-down GIS mini-map and AI detection feed" width="60%">
+  <img src="Screenshot%202026-09-30%20023500.png" alt="2D top-down GIS mini-map and AI detection feed" width="60%">
 </p>
 
 The **2D top-down GIS mini-map** tracks the trolley's position (e.g. `334.0 m / 620 m`) and marks defects `DEF-104 … DEF-106`, while the **AI Detection Feed** lists every finding (e.g. `DEF-101 · Railhead Micro-Crack · KM 0.042`) with severity filters (**Critical / High / Medium / Low / Normal**) and *Natural AI Explanations*.
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 📡 Sensor Fusion in Action
 
@@ -182,8 +172,8 @@ Four synchronized live streams feed the AI engine. Watch the animation below: th
     <th align="center">🚨 Anomaly detected</th>
   </tr>
   <tr>
-    <td align="center"><img src="Screenshot_2026-09-30_023329.png" alt="Sensor streams on healthy track" width="100%"></td>
-    <td align="center"><img src="Screenshot_2026-09-30_023448.png" alt="Sensor streams showing anomaly: 0.95 G spike, 92.6 dB burst, gauge widening 94.8%" width="100%"></td>
+    <td align="center"><img src="Screenshot%202026-09-30%20023329.png" alt="Sensor streams on healthy track" width="100%"></td>
+    <td align="center"><img src="Screenshot%202026-09-30%20023448.png" alt="Sensor streams showing anomaly: 0.95 G spike, 92.6 dB burst, gauge widening 94.8%" width="100%"></td>
   </tr>
   <tr>
     <td><sub>Vibration ≈ <b>0.23 G</b> · Acoustic ≈ <b>67 dB</b> · Crown deviation ≈ <b>−1.3 mm</b></sub></td>
@@ -202,7 +192,7 @@ flowchart LR
     style W fill:#1e293b,stroke:#64748b,color:#fff
 ```
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🗺️ Digital Track Health Map
 
@@ -213,7 +203,7 @@ The route is split into segments, each with its own health score, anomaly count 
 </p>
 
 <p align="center">
-  <img src="Screenshot_2026-09-30_023320.png" alt="Dashboard capture of the track health map, overall health index and inspection timeline" width="70%"><br>
+  <img src="Screenshot%202026-09-30%20023320.png" alt="Dashboard capture of the track health map, overall health index and inspection timeline" width="70%"><br>
   <sub>Dashboard capture — segment health, 6 total anomalies, 0 critical risks, and the 4D inspection pass timeline (Day 1 · 15 · 30 · 45 · 60)</sub>
 </p>
 
@@ -234,7 +224,7 @@ xychart-beta
 | 🟡 | **Warning** | 52 – 77% | Plan maintenance |
 | 🔴 | **Critical** | 78 – 100% | Priority inspection |
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🔧 Hardware & Architecture
 
@@ -299,7 +289,7 @@ stateDiagram-v2
     Alert --> [*]: "Priority inspection recommended"
 ```
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🌍 Impact
 
@@ -312,7 +302,7 @@ stateDiagram-v2
 
 **Key benefits:** ⏱️ early detection · 🎯 higher accuracy through fusion · 📍 precise localization · 🔮 predictive maintenance · 💰 low-cost commodity hardware.
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## ⚠️ Challenges & Mitigations
 
@@ -325,7 +315,7 @@ stateDiagram-v2
 
 > **Note:** the current prototype runs on **simulated data** for demonstration; real-track validation is part of the roadmap.
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🛣️ Roadmap
 
@@ -338,7 +328,7 @@ stateDiagram-v2
 - [ ] Ruggedized, weatherproof enclosure for field trials
 - [ ] Trend-based degradation models (e.g. Kalman-filter based) for longer-horizon forecasts
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 🚀 Getting Started
 
@@ -368,12 +358,11 @@ Aahat/
 ├── pipeline.svg
 ├── sensor-streams.svg
 ├── health-map.svg
-├── divider.svg
 ├── stats.svg
-└── Screenshot_2026-09-30_0232xx.png  (…10 dashboard screenshots)
+└── Screenshot 2026-09-30 ….png   (10 dashboard screenshots)
 ```
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 📚 References
 
@@ -384,7 +373,7 @@ Aahat/
 5. *"Sensor Fusion for Track Geometry Monitoring: Integrating On-Board Condition Monitoring and Degradation Models via Kalman Filtering,"* arXiv, 2025.
 6. *"Advancing railway track health monitoring: Integrating GPR, InSAR and machine learning,"* ScienceDirect, 2024.
 
-<p align="center"><img src="divider.svg" width="100%" alt=""></p>
+---
 
 ## 👤 Author
 
