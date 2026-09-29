@@ -377,7 +377,7 @@ Aahat/
 
 ## 👤 Author
 
-**Chethan Kumar KP** 
+**Chethan Kumar KP** -
 Atria Institute of Technology, Bengaluru
 
 <p align="center">
