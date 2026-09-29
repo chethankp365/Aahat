@@ -49,13 +49,15 @@ export function getTrackFrameAt(spline: THREE.CatmullRomCurve3, u: number) {
 
   // Apply bank angle rotation to binormal & normal
   const normal = up.clone().applyAxisAngle(tangent, bankAngle).normalize();
-  const binormal = new THREE.Vector3().crossVectors(tangent, normal).normalize();
+  const right = new THREE.Vector3().crossVectors(normal, tangent).normalize();
+  const binormal = right; // alias for right-handed lateral vector
 
   return {
     position,
     tangent,
     normal,
     binormal,
+    right,
     bankAngle,
   };
 }

@@ -47,9 +47,9 @@ export function InspectionVehicle() {
 
     // Set position slightly above rail head surface
     const vehiclePos = position.clone().addScaledVector(normal, 0.28);
-    vehicleRef.current.position.lerp(vehiclePos, 0.85);
+    vehicleRef.current.position.copy(vehiclePos);
 
-    // Construct rotation matrix to orient front of vehicle to spline tangent
+    // Construct right-handed rotation matrix to orient front of vehicle along spline tangent
     const rotMat = new THREE.Matrix4().makeBasis(binormal, normal, tangent);
     const targetQuat = new THREE.Quaternion().setFromRotationMatrix(rotMat);
 
@@ -57,7 +57,7 @@ export function InspectionVehicle() {
     const bankQuat = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 0, 1), bankAngle);
     targetQuat.multiply(bankQuat);
 
-    vehicleRef.current.quaternion.slerp(targetQuat, 0.85);
+    vehicleRef.current.quaternion.slerp(targetQuat, 0.95);
 
     // Spin wheels and animate side connecting rods according to train speed
     const wheelSpinSpeed = (vehicleSpeed / 3.6) * delta * 4.5;
