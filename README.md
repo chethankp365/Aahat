@@ -52,14 +52,19 @@
 ## 🌐 Live Demo
 
 <p align="center">
-  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/">
-    <img src="https://img.shields.io/badge/%E2%96%B6_LAUNCH_AAHAT_LIVE_DASHBOARD-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white" alt="Launch AAHAT live dashboard" height="48">
-  </a>
+  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/"><img src="https://img.shields.io/badge/LAUNCH_LIVE_DASHBOARD-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0f172a" alt="Launch AAHAT live dashboard" height="46"></a>
 </p>
 
 <p align="center">
-  <b><a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/">https://aahat-bhz8guj3j-ck21-86e1.vercel.app/</a></b><br>
-  <sub>Interactive 3D digital twin · switch camera views · scrub the 4D timeline · try Forecast Mode</sub>
+  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/">aahat-bhz8guj3j-ck21-86e1.vercel.app</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/3D_Digital_Twin-22d3ee?style=flat-square" alt="3D Digital Twin">
+  <img src="https://img.shields.io/badge/Camera_Views-a78bfa?style=flat-square" alt="Camera views">
+  <img src="https://img.shields.io/badge/4D_Timeline-34d399?style=flat-square" alt="4D timeline">
+  <img src="https://img.shields.io/badge/Forecast_Mode-f59e0b?style=flat-square" alt="Forecast mode">
+  <img src="https://img.shields.io/badge/Live_Telemetry-f43f5e?style=flat-square" alt="Live telemetry">
 </p>
 
 ---
