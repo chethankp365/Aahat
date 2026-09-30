@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/"><img src="https://img.shields.io/badge/%F0%9F%9A%80_LIVE_DEMO-Open_the_Dashboard-10b981?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"></a>
   <img src="https://img.shields.io/badge/Status-Working_Prototype-22d3ee?style=for-the-badge" alt="Status">
 </p>
 
@@ -21,6 +22,7 @@
 </p>
 
 <p align="center">
+  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/"><b>🚀 Live Demo</b></a> ·
   <a href="#-the-problem">Problem</a> ·
   <a href="#-the-solution">Solution</a> ·
   <a href="#-live-dashboard-tour">Dashboard</a> ·
@@ -43,6 +45,21 @@
 
 <p align="center">
   <img src="pipeline.svg" alt="AAHAT sensing, fusion, localization, scoring and alert pipeline" width="100%">
+</p>
+
+---
+
+## 🌐 Live Demo
+
+<p align="center">
+  <a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/">
+    <img src="https://img.shields.io/badge/%E2%96%B6_LAUNCH_AAHAT_LIVE_DASHBOARD-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white" alt="Launch AAHAT live dashboard" height="48">
+  </a>
+</p>
+
+<p align="center">
+  <b><a href="https://aahat-bhz8guj3j-ck21-86e1.vercel.app/">https://aahat-bhz8guj3j-ck21-86e1.vercel.app/</a></b><br>
+  <sub>Interactive 3D digital twin · switch camera views · scrub the 4D timeline · try Forecast Mode</sub>
 </p>
 
 ---
